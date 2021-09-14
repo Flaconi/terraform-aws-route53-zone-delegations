@@ -17,4 +17,3 @@ variable "delegations" {
     name_servers = list(string)
   }))
 }
-
