@@ -1,9 +1,12 @@
 variable "zone_id" {
-  type = string
+  type        = string
+  description = "AWS Route53 Hosted Zone ID"
 }
 
 variable "ttl" {
-  type = string
+  type        = number
+  description = "TTL for delegation Route53 record in seconds"
+  default     = 3600
 }
 
 variable "delegations" {
@@ -14,4 +17,3 @@ variable "delegations" {
     name_servers = list(string)
   }))
 }
-
